@@ -42,3 +42,7 @@ html {
 main {
   background-color: var(--sort);
 }
+
+h1 {
+  font-family: rubik;
+}
