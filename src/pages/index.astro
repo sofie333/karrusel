@@ -1,4 +1,7 @@
 ---
+import "../css/style.css";
+
+import Formular from "./components/index_components/Formular.astro";
 import Menu from "./components/Menu.astro";
 ---
 
@@ -11,62 +14,27 @@ import Menu from "./components/Menu.astro";
     <title>Astro</title>
   </head>
   <body>
-    <Menu />
-    <h1>Astro</h1>
-
     <main>
-      <article>
-        <h3>Overskrift</h3>
-        <p>Info hejhejehje</p>
+      <h1>KARRUSEL</h1>
+      <p>22 - 24 AUGUST 2024</p>
 
-        <form action="action_page.php">
-          <div class="as_formflex">
-            <label id="name" for="fname">Name</label>
-            <input type="text" id="fname" name="fullname" placeholder="Your name..." />
+      <img src="/public/img/indeximg.webp" alt="festligt billede" />
 
-            <label id="email" for="femail">Email</label>
-            <input type="text" id="email" name="emailid" placeholder="Your Email..." />
-          </div>
+      <!-- indsæt img og knap component -->
 
-          <button>Get Info</button>
-        </form>
-      </article>
+      <h3>REFSHALEØEN - COPENHAGEN</h3>
+      <p># DAYS OF HOUSE, DISCO AND TECHNO IN THE WOODS</p>
 
-      <style>
-        button {
-          background-color: rgba(255, 0, 0, 0);
-          border: 4px solid red;
-          border-radius: 7px;
-          width: 100px;
-          height: 35px;
-          position: absolute;
-          bottom: 10px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
+      <!-- indsæt live banner component -->
 
-        article {
-          border: 2px solid silver;
-          border-radius: 20px;
-          background-color: rgba(255, 0, 0, 0);
-          color: blue;
-          width: 450px;
-          position: relative;
-          padding-bottom: 120px;
-          margin: 20px;
-        }
+      <h1>LINEUP 2024</h1>
 
-        input {
-          background-color: white;
-          border: 1px solid silver;
-          border-radius: 7px;
-        }
+      <!-- Indsæt lineup -->
 
-        button:hover {
-          background-color: red;
-          color: white;
-        }
-      </style>
+      <!-- indsæt karrusel illu -->
+
+      <Formular header="Want to volunteer?" info="Sign up here for more info abouDo you want to be a volunteer at Karrusel Festival 2024? write your information down belowt volunteering at Karrusel Festival." />
+      <Formular header="Get the latest news and updates" info="Do you want to get the news from Karrusel Festival? sign in here " />
     </main>
   </body>
 </html>
