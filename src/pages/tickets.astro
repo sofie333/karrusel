@@ -2,68 +2,87 @@
 import MainLayout from "../pages/layouts/MainLayout.astro";
 ---
 
-
-  
- <MainLayout>
- <h1>Tickets</h1>
- <img id="to_stjerner" src="../img/2stjerner.svg" alt="billede af to stjerner" width="100px">
- <img id="stjerne_lille" src="../img/stjerne+lillesort.svg" alt="billede af stjerne" width="100px">
-<img id="stor" src="../img/ticket.svg" alt="billede af ticket">
-<h2>Can't Attend the whole festival?</h2>
-<p>Buy a festival pass to an individual day that you would like to attend.</p>
-<p>Price pr. day 450 DKK</p>
-<p>Terms: age limit 18+</p>
-<img id="thursday" src="../img/ticket_thursday.svg" alt="billede af ticket thursday">
-<img id="friday" src="../img/ticket_friday.svg" alt="billede af ticket friday">
-<img id="saturday" src="../img/ticket_saturday.svg" alt="billede af ticket saturday">
+<MainLayout>
+  <h1>Tickets</h1>
+  <img
+    id="to_stjerner"
+    src="../img/2stjerner.svg"
+    alt="billede af to stjerner"
+    width="100px"
+  />
+  <img
+    id="stjerne_lille"
+    src="../img/stjerne+lillesort.svg"
+    alt="billede af stjerne"
+    width="100px"
+  />
+  <section class="center">
+    <img id="stor" src="../img/ticket.svg" alt="billede af ticket" />
+  </section>
+  <h2>Can't Attend the whole festival?</h2>
+  <p>Buy a festival pass to an individual day that you would like to attend.</p>
+  <p>Price pr. day 450 DKK</p>
+  <p>Terms: age limit 18+</p>
+  <img
+    id="thursday"
+    src="../img/ticket_thursday.svg"
+    alt="billede af ticket thursday"
+  />
+  <img
+    id="friday"
+    src="../img/ticket_friday.svg"
+    alt="billede af ticket friday"
+  />
+  <img
+    id="saturday"
+    src="../img/ticket_saturday.svg"
+    alt="billede af ticket saturday"
+  />
 </MainLayout>
 
 <style>
-    p {
-        color: white;
-        font-family: 'Courier New', Courier, monospace;
-    }
+  p {
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+  }
 
-    h1 {
-        color: white;
-        font-family: rubik;
-        text-align: center;
-        padding-top: 30px;
-        padding-bottom: 80px;
+  h1 {
+    color: white;
+    font-family: rubik;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+  h2 {
+    color: white;
+    font-family: rubik;
+  }
 
-    }
-    h2 {
-        color: white;
-        font-family: rubik;
-    }
+  .center {
+    display: flex;
+    justify-content: center;
+  }
 
-    .stor {
-       display: block;
-       position: absolute;
-       width: 650px;   
-    }
+  .stor {
+    display: block;
+    max-width: 650px;
+  }
 
-    .thursday {
-        display: block;
-        padding-left: 50px;
-    }
+  .thursday {
+    display: block;
+    padding-left: 50px;
+  }
 
-    .friday {
+  .friday {
+  }
 
-    }
+  .saturday {
+  }
 
-    .saturday {
+  .to_stjerner {
+  }
 
-    }
-
-    .to_stjerner {
-
-    }
-
-    .stjerne_lille {
-       padding-left: 50px; 
-    }
-
-  
-    
+  .stjerne_lille {
+    padding-left: 50px;
+  }
 </style>
