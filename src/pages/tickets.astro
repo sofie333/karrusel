@@ -1,16 +1,17 @@
 ---
-
+import MainLayout from "../pages/layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Tickets</title>
-  </head>
-  <body>
-    <h1>Tickets</h1>
-  </body>
-</html>
+
+  
+ <MainLayout>
+ <h1>Tickets</h1>
+<img src="../img/ticket.svg" alt="billede af ticket">
+<h2>Can't Attend the whole festival?</h2>
+<p>Buy a festival pass to an individual day that you would like to attend.</p>
+<p>Price pr. day 450 DKK</p>
+<p>Terms: age limit 18+</p>
+<img src="../img/ticket_thursday" alt="billede af ticket thursday">
+<img src="../img/ticket_friday" alt="billede af ticket friday">
+<img src="../img/ticket_saturday" alt="billede af ticket saturday">
+</MainLayout>
