@@ -4,44 +4,97 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <article class="safespace">
-    <h1>SAFE SPACE</h1>
-    <ul>
-      <li>KARRUSEL WELCOMES EVERYBODY - WE BELIEVE IN THE RIGHT OF EVERYONE TO EXPRESS THEMSELVES</li>
-      <li>NO HOMOPHOBIA, RASICM, BODYSHAMING, ABLEISM, TRANSPHOBIA, OR SEXISM IN ANY FORM</li>
-      <li>KARRUSEL ONLY EXISTS IF EVERYONE TAKES CARE OF EACH OTHER, RESPECTS THEIR OWN AND OTHERS BOUNDARIES, EMBRACES DIVERSITY AND ACTS AS A PART OF A COMMUNITY</li>
-      <li>SPEAK UP RATHER THAN LOOKING THE OTHER WAY - REACH OUT TO OUR AWARENESS TEAM IN THE PINK VESTS IF YOU FEEL UNSAFE</li>
-    </ul>
+    <div class="col1">
+      <h1>SAFE SPACE</h1><br />
+      <ul>
+        <li>KARRUSEL WELCOMES EVERYBODY - WE BELIEVE IN THE RIGHT OF EVERYONE TO EXPRESS THEMSELVES</li><br />
+        <li>NO HOMOPHOBIA, RASICM, BODYSHAMING, ABLEISM, TRANSPHOBIA, OR SEXISM IN ANY FORM</li><br />
+        <li>KARRUSEL ONLY EXISTS IF EVERYONE TAKES CARE OF EACH OTHER, RESPECTS THEIR OWN AND OTHERS BOUNDARIES, EMBRACES DIVERSITY AND ACTS AS A PART OF A COMMUNITY</li><br />
+        <li>SPEAK UP RATHER THAN LOOKING THE OTHER WAY - REACH OUT TO OUR AWARENESS TEAM IN THE PINK VESTS IF YOU FEEL UNSAFE</li><br />
+      </ul>
+    </div>
+    <div class="star1">
+      <img src="/public/img/stjernemedbue.svg" alt="Stor stjerne" />
+    </div>
   </article>
   <article class="sustainability">
-    <h1>SUSTAINABILITY</h1>
-    <ul>
-      <li>SAVE RESOURCES AND REDUCE WASTE - WE USE LEFTOVER MATERIALS AND TIMBER FOR STAGE DESIGNS AND INSTALLATIONS</li>
-      <li>RE-USE OF PRODUCTION AND PRINT MATERIALS WHEN POSSIBLE EVERY YEAR</li>
-      <li>BEVERAGES ARE SERVED IN REUSABLE OR SUSTAINABLE MATERIALS AND STRAWS ARE NOT USED</li>
-      <li>HOW TO CONTRIBUTE - USE PUBLIC TRANSPORTATION TO THE FESTIVAL, DONT BRING CONFETTI OR GLITTER, BRING A CUP OR BOTTLE AND USE OUR TAP WATER STATIONS FOR FREE</li>
-    </ul>
+    <div class="star2">
+      <img src="/public/img/2stjerner.svg" alt="To stjerner" />
+    </div>
+    <div class="col2">
+      <h1>SUSTAINABILITY</h1><br />
+      <ul>
+        <li>SAVE RESOURCES AND REDUCE WASTE - WE USE LEFTOVER MATERIALS AND TIMBER FOR STAGE DESIGNS AND INSTALLATIONS</li><br />
+        <li>RE-USE OF PRODUCTION AND PRINT MATERIALS WHEN POSSIBLE EVERY YEAR</li><br />
+        <li>BEVERAGES ARE SERVED IN REUSABLE OR SUSTAINABLE MATERIALS AND STRAWS ARE NOT USED</li><br />
+        <li>HOW TO CONTRIBUTE - USE PUBLIC TRANSPORTATION TO THE FESTIVAL, DONT BRING CONFETTI OR GLITTER, BRING A CUP OR BOTTLE AND USE OUR TAP WATER STATIONS FOR FREE</li><br />
+      </ul>
+    </div>
   </article>
 </MainLayout>
 
 <style>
-  .safespace h1 {
-    color: var(--blaa);
-  }
-  .sustainability h1 {
-    color: var(--lilla);
-  }
+  @media (max-width: 850px) {
+    .safespace h1 {
+      color: var(--blaa);
+      min-width: 550px;
+      margin-left: 20%;
+    }
+    .sustainability h1 {
+      color: var(--lilla);
+    }
 
-  li {
-    color: var(--hvid);
-  }
+    li {
+      color: var(--hvid);
+      line-height: 1.5rem;
+      font-family: worksans;
+      margin-left: 20%;
+      min-width: 500px;
+    }
 
-  .safespace {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
+    .star1,
+    .star2 {
+      padding-left: 50%;
+    }
 
-  .sustainability {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    .safespace {
+      padding-bottom: 5%;
+    }
+  }
+  @media (min-width: 850px) {
+    .safespace h1 {
+      color: var(--blaa);
+      min-width: 550px;
+    }
+    .sustainability h1 {
+      color: var(--lilla);
+    }
+    li {
+      color: var(--hvid);
+      line-height: 1.5rem;
+      font-family: worksans;
+      margin-left: 20%;
+      min-width: 500px;
+    }
+    .safespace {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      margin-bottom: 5%;
+    }
+
+    .sustainability {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      padding-left: 5%;
+    }
+
+    .safespace,
+    .sustainability {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    ul {
+      max-width: 550px;
+    }
   }
 </style>
