@@ -1,0 +1,24 @@
+---
+const { name } = Astro.props;
+---
+
+<article>
+  <img src="/public/img/lineup_stjerner.svg" alt="stjerne" width="10px" />
+  <p>{name}</p>
+  <img src="/public/img/lineup_stjerner.svg" alt="stjerne" width="10px" />
+</article>
+
+<style>
+  p {
+    font-family: pt;
+    font-size: 20px;
+    color: var(--hvid);
+  }
+
+  p:hover {
+    color: var(--blae);
+  }
+
+  article {
+  }
+</style>

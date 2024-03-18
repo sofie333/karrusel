@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from "astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const url = "https://dofjurysipshifoimvyh.supabase.co";
+
+  const options = {
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvZmp1cnlzaXBzaGlmb2ltdnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTEzMjYsImV4cCI6MjAyNjA2NzMyNn0.9dty-Cjmpg6zg6892rW1Zbx8oXq36KftJTYRLgtgqyw",
+    },
+  };
+
+  const data = await fetch(url, options).then((response) => response.json());
+
+  return data.map((artist) => {
+    return {
+      params: { name: artist.name },
+      props: { artist },
+    };
+  });
+}
+const { artist } = Astro.props;
+---
+
+<article><h1>{artist}</h1><p></p></article>
+
+<MainLayout />
