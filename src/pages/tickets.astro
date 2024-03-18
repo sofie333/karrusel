@@ -6,14 +6,14 @@ import MainLayout from "../pages/layouts/MainLayout.astro";
   
  <MainLayout>
  <h1>Tickets</h1>
-<img src="../img/ticket.svg" alt="billede af ticket" width="750">
+<img id="stor" src="../img/ticket.svg" alt="billede af ticket" width="650">
 <h2>Can't Attend the whole festival?</h2>
 <p>Buy a festival pass to an individual day that you would like to attend.</p>
 <p>Price pr. day 450 DKK</p>
 <p>Terms: age limit 18+</p>
-<img src="../img/ticket_thursday" alt="billede af ticket thursday">
-<img src="../img/ticket_friday" alt="billede af ticket friday">
-<img src="../img/ticket_saturday" alt="billede af ticket saturday">
+<img id="thursday" src="../img/ticket_thursday.svg" alt="billede af ticket thursday">
+<img id="friday" src="../img/ticket_friday.svg" alt="billede af ticket friday">
+<img id="saturday" src="../img/ticket_saturday.svg" alt="billede af ticket saturday">
 </MainLayout>
 
 <style>
@@ -27,11 +27,31 @@ import MainLayout from "../pages/layouts/MainLayout.astro";
         font-family: rubik;
         text-align: center;
         padding-top: 30px;
-        padding-bottom: 20px;
+        padding-bottom: 80px;
 
     }
     h2 {
         color: white;
         font-family: rubik;
     }
+
+    .stor {
+       display: block;
+       position: absolute;
+       width: 650px;   
+    }
+
+    .thursday {
+        display: block;
+        padding-left: 50px;
+    }
+
+    .friday {
+
+    }
+
+    .saturday {
+        
+    }
+    
 </style>
