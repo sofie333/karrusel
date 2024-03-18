@@ -10,12 +10,14 @@ import MainLayout from "../pages/layouts/MainLayout.astro";
     alt="billede af to stjerner"
     width="100px"
   />
-  <img
-    id="stjerne_lille"
-    src="../img/stjerne+lillesort.svg"
-    alt="billede af stjerne"
-    width="100px"
-  />
+  <section class="stjerne_lille">
+    <img
+      id="stjerne_lille"
+      src="../img/stjerne+lillesort.svg"
+      alt="billede af stjerne"
+      width="100px"
+    />
+  </section>
   <section class="center">
     <img id="stor" src="../img/ticket.svg" alt="billede af ticket" />
   </section>
@@ -83,6 +85,7 @@ import MainLayout from "../pages/layouts/MainLayout.astro";
   }
 
   .stjerne_lille {
-    padding-left: 50px;
+    padding-left: 1250px;
+    padding-top: 20px;
   }
 </style>
