@@ -1,3 +1,88 @@
 ---
+import "../css/style.css";
 
+const { header, info } = Astro.props;
 ---
+
+<article>
+  <h3>{header}</h3>
+  <p>{info}</p>
+
+  <form action="#">
+    <div id="as_formflex">
+      <label id="name" for="fname">Name</label>
+      <input type="text" id="fname" name="fullname" placeholder="Your name..." />
+
+      <label id="email" for="femail">Email</label>
+      <input type="text" id="email" name="emailid" placeholder="Your Email..." />
+    </div>
+
+    <button>Get Info</button>
+  </form>
+</article>
+
+<style>
+  button {
+    background-color: rgba(255, 0, 0, 0);
+    border: 4px solid var(--pink);
+    border-radius: 7px;
+    color: var(--hvid);
+    width: 120px;
+    height: 45px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  input {
+    display: block; /* Make inputs block elements */
+    margin-bottom: 10px; /* Add some space between inputs */
+    background-color: white;
+    border: 1px solid var(--graa);
+    border-radius: 7px;
+    margin: auto;
+    height: 26px;
+    width: 350px;
+    font-family: pt;
+  }
+
+  label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Add some space between labels and inputs */
+    padding-top: 20px;
+    margin: 12px;
+    text-indent: 50px;
+    font-family: pt;
+  }
+  article {
+    border: 2px solid silver;
+    border-radius: 20px;
+    background-color: rgba(255, 0, 0, 0);
+    color: var(--blaa);
+    width: 450px;
+    position: relative;
+    padding-bottom: 120px;
+    margin: 20px;
+  }
+
+  h3 {
+    font-family: rubik;
+    text-align: center;
+    padding-top: 12px;
+  }
+
+  p {
+    font-family: worksans;
+    color: var(--graa);
+    text-align: center;
+    padding-top: 20px;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  button:hover {
+    background-color: var(--pink);
+    color: white;
+  }
+</style>
