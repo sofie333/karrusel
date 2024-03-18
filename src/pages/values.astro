@@ -38,7 +38,7 @@ import MainLayout from "../pages/layouts/MainLayout.astro";
     .safespace h1 {
       color: var(--blaa);
       min-width: 550px;
-      margin-left: 14%;
+      margin-left: 20%;
     }
     .sustainability h1 {
       color: var(--lilla);
@@ -62,19 +62,30 @@ import MainLayout from "../pages/layouts/MainLayout.astro";
     }
   }
   @media (min-width: 850px) {
+    .safespace h1 {
+      color: var(--blaa);
+      min-width: 550px;
+    }
+    .sustainability h1 {
+      color: var(--lilla);
+    }
+    li {
+      color: var(--hvid);
+      line-height: 1.5rem;
+      font-family: worksans;
+      margin-left: 20%;
+      min-width: 500px;
+    }
     .safespace {
       display: grid;
       grid-template-columns: 2fr 1fr;
+      margin-bottom: 5%;
     }
 
     .sustainability {
       display: grid;
       grid-template-columns: 1fr 2fr;
       padding-left: 5%;
-    }
-
-    .safespace h1 {
-      margin-right: %;
     }
 
     .safespace,
