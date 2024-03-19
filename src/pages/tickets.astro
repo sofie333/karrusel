@@ -1,51 +1,40 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Buttons from "../components/Buttons.astro";
 ---
 
-<MainLayout>
+<MainLayout title="Tickets">
   <h1>Tickets</h1>
-  <img
-    id="to_stjerner"
-    src="../img/2stjerner.svg"
-    alt="billede af to stjerner"
-    width="100px"
-  />
-  <section class="stjerne_lille">
-    <img
-      id="stjerne_lille"
-      src="../img/stjerne+lillesort.svg"
-      alt="billede af stjerne"
-      width="100px"
-    />
+  <section class="stjerner">
+    <img id="to_stjerner" src="../img/2stjerner.svg" alt="billede af to stjerner" />
+    <img id="stjerne_lille" src="../img/stjerne+lillesort.svg" alt="billede af stjerne" />
   </section>
   <section class="center">
     <img id="stor" src="../img/ticket.svg" alt="billede af ticket" />
+    <Buttons variant="pos_1" size="large">BUY NOW</Buttons>
   </section>
-  <h2>Can't Attend the whole festival?</h2>
-  <p>Buy a festival pass to an individual day that you would like to attend.</p>
-  <p>Price pr. day 450 DKK</p>
-  <p>Terms: age limit 18+</p>
-  <img
-    id="thursday"
-    src="../img/ticket_thursday.svg"
-    alt="billede af ticket thursday"
-  />
-  <img
-    id="friday"
-    src="../img/ticket_friday.svg"
-    alt="billede af ticket friday"
-  />
-  <img
-    id="saturday"
-    src="../img/ticket_saturday.svg"
-    alt="billede af ticket saturday"
-  />
+  <div class="col1-1">
+    <section class="textbox">
+      <h2>Can't Attend the whole festival?</h2>
+      <p>Buy a festival pass to an individual day that you would like to attend.</p>
+      <p>Price pr. day <span id="price">450 DKK</span></p>
+      <p>Terms: age limit 18+</p>
+    </section>
+    <div class="daytickets">
+      <img id="thursday" src="../img/ticket_thursday.svg" alt="billede af ticket thursday" />
+      <Buttons variant="pos_2" size="small">BUY NOW</Buttons>
+      <img id="friday" src="../img/ticket_friday.svg" alt="billede af ticket friday" />
+      <Buttons variant="pos_3" size="small">BUY NOW</Buttons>
+      <img id="saturday" src="../img/ticket_saturday.svg" alt="billede af ticket saturday" />
+      <Buttons variant="pos_4" size="small">BUY NOW</Buttons>
+    </div>
+  </div>
 </MainLayout>
 
 <style>
   p {
-    color: white;
-    font-family: "Courier New", Courier, monospace;
+    color: var(--hvid);
+    font-family: worksans;
   }
 
   h1 {
@@ -67,25 +56,54 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   .stor {
     display: block;
-    max-width: 650px;
   }
 
-  .thursday {
-    display: block;
-    padding-left: 50px;
+  #thursday,
+  #friday {
+    margin-bottom: 5%;
   }
 
-  .friday {
+  #price {
+    font-family: rubik;
+    font-size: 1.2rem;
   }
 
-  .saturday {
+  .daytickets {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    margin-bottom: 10%;
   }
 
-  .to_stjerner {
+  .textbox {
+    margin-top: 5%;
   }
 
-  .stjerne_lille {
-    padding-left: 1250px;
-    padding-top: 20px;
+  .textbox p {
+    line-height: 1.5rem;
+    max-width: 400px;
+  }
+
+  .textbox h2 {
+    max-width: 500px;
+  }
+
+  .stjerner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+
+  #stjerne_lille {
+    padding-left: 50%;
+  }
+  .col1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 </style>

@@ -1,0 +1,53 @@
+---
+const { variant, size } = Astro.props;
+---
+
+<button class={variant + " " + size}><slot /></button>
+
+<style>
+  button {
+    padding: 2rem;
+    background-color: var(--sort);
+    border: 4px solid var(--pink);
+    border-radius: 10px;
+    color: var(--hvid);
+    position: absolute;
+    transform: translateX(-50%);
+    font-family: pt;
+  }
+
+  .small {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+
+  .large {
+    font-size: 1.6rem;
+    padding: 20px 24px;
+  }
+
+  .pos_1 {
+    left: 65%;
+    bottom: -19%;
+  }
+
+  .pos_2 {
+    left: 73.4%;
+    bottom: -54%;
+  }
+
+  .pos_3 {
+    left: 73.4%;
+    bottom: -76%;
+  }
+
+  .pos_4 {
+    left: 73.4%;
+    bottom: -98%;
+  }
+
+  button:hover {
+    background-color: var(--pink);
+    color: var(--hvid);
+  }
+</style>
