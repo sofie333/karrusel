@@ -1,4 +1,5 @@
 ---
+import Menu from "../components/Menu.astro";
 import type { GetStaticPaths } from "astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
@@ -7,8 +8,7 @@ export async function getStaticPaths() {
 
   const options = {
     headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvZmp1cnlzaXBzaGlmb2ltdnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTEzMjYsImV4cCI6MjAyNjA2NzMyNn0.9dty-Cjmpg6zg6892rW1Zbx8oXq36KftJTYRLgtgqyw",
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvZmp1cnlzaXBzaGlmb2ltdnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTEzMjYsImV4cCI6MjAyNjA2NzMyNn0.9dty-Cjmpg6zg6892rW1Zbx8oXq36KftJTYRLgtgqyw",
     },
   };
 
@@ -24,6 +24,7 @@ export async function getStaticPaths() {
 const { artist } = Astro.props;
 ---
 
+<Menu />
 <article><h1>{artist}</h1><p></p></article>
 
 <MainLayout>
@@ -32,15 +33,7 @@ const { artist } = Astro.props;
       <h1>VTSS</h1>
       <h2>25th august 2024</h2>
       <h2>00.00 Manegen</h2>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero cumque
-        enim nesciunt, iure officiis in facilis voluptate voluptatum eos
-        consequuntur id distinctio, excepturi magnam alias dolore quae, deleniti
-        sed ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Accusamus soluta nam dolor eveniet natus fugiat excepturi iste suscipit
-        dicta consequuntur alias beatae enim adipisci consectetur, dignissimos
-        qui doloribus sint maiores.
-      </p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero cumque enim nesciunt, iure officiis in facilis voluptate voluptatum eos consequuntur id distinctio, excepturi magnam alias dolore quae, deleniti sed ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus soluta nam dolor eveniet natus fugiat excepturi iste suscipit dicta consequuntur alias beatae enim adipisci consectetur, dignissimos qui doloribus sint maiores.</p>
     </div>
 
     <div class="artist_col2">

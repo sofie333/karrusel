@@ -1,7 +1,6 @@
 ---
 import "../css/style.css";
 const { title } = Astro.props;
-import Menu from "../components/Menu.astro";
 ---
 
 <html lang="en">
@@ -13,7 +12,6 @@ import Menu from "../components/Menu.astro";
     <title>{title}</title>
   </head>
   <body>
-    <Menu />
     <h1>{title}</h1>
     <main>
       <slot />
