@@ -1,7 +1,31 @@
 ---
 import Artist from "./Artist.astro";
+
+const data = await fetch("https://dofjurysipshifoimvyh.supabase.co/rest/v1/karrusel", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvZmp1cnlzaXBzaGlmb2ltdnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTEzMjYsImV4cCI6MjAyNjA2NzMyNn0.9dty-Cjmpg6zg6892rW1Zbx8oXq36KftJTYRLgtgqyw",
+  },
+}).then((res) => res.json());
+
+
 ---
 
 <article>
-  <Artist name="bob"/>
+{
+  data.map((artist) => {
+    return <Artist data={artist}/>;
+  })
+}
 </article>
+
+<style>
+
+article {
+  display: flex;
+  gap: 20px;
+
+}
+
+
+</style>
