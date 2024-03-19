@@ -1,13 +1,15 @@
 ---
-const { name } = Astro.props;
+const { data } = Astro.props;
+//console.log(data);
 ---
 
-<article>
-  <img src="/public/img/lineup_stjerner.svg" alt="stjerne" width="10px" />
-  <p>{name}</p>
-  <img src="/public/img/lineup_stjerner.svg" alt="stjerne" width="10px" />
-</article>
-
+<a href={"artists/$(data.id)"}>
+  <article>
+    <img src="/img/2stjerner.svg" alt="stjerne" width="30px" />
+    <p>{data.name}</p>
+    <img src="/img/2stjerner.svg" alt="stjerne" width="30px" />
+  </article>
+</a>
 <style>
   p {
     font-family: pt;
@@ -16,9 +18,14 @@ const { name } = Astro.props;
   }
 
   p:hover {
-    color: var(--blae);
+    color: var(--blaa);
   }
 
   article {
+    display: flex;
+  }
+
+  a {
+    text-decoration: none;
   }
 </style>

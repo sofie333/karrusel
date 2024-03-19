@@ -1,7 +1,5 @@
 ---
-
-
-const { header, info } = Astro.props;
+const { header, info, knap } = Astro.props;
 ---
 
 <article>
@@ -10,14 +8,18 @@ const { header, info } = Astro.props;
 
   <form action="#">
     <div id="as_formflex">
-      <label id="name" for="fname">Name</label>
-      <input type="text" id="fname" name="fullname" placeholder="Your name..." />
+      <div>
+        <label id="name" for="fname">Name</label>
+        <input type="text" id="fname" name="fullname" placeholder="Your name..." />
+      </div>
 
-      <label id="email" for="femail">Email</label>
-      <input type="text" id="email" name="emailid" placeholder="Your Email..." />
+      <div>
+        <label id="email" for="femail">Email</label>
+        <input type="text" id="email" name="emailid" placeholder="Your Email..." />
+      </div>
     </div>
 
-    <button>Get Info</button>
+    <button>{knap}</button>
   </form>
 </article>
 
@@ -33,6 +35,9 @@ const { header, info } = Astro.props;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    font-family: pt;
+    font-weight: bold;
+    cursor: pointer;
   }
 
   input {
@@ -84,5 +89,12 @@ const { header, info } = Astro.props;
   button:hover {
     background-color: var(--pink);
     color: white;
+  }
+
+  @media (min-width: 800px) {
+    .as_formflex {
+      display: flex;
+      flex-direction: row;
+    }
   }
 </style>
