@@ -3,9 +3,11 @@
 ---
 
 <nav>
-  <a href="index">
-    <img src="/public/img/logo.svg" alt="Logo" />
-  </a>
+  <div class="logo">
+    <a href="index">
+      <img src="/public/img/logo.svg" alt="Logo" />
+    </a>
+  </div>
   <a href="tickets">TICKETS</a>
   <a href="map">MAP</a>
   <a href="values">VALUES</a>
@@ -14,11 +16,11 @@
 <style>
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 60px;
     padding: 0 20px;
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 5em;
   }
 
   nav a {
@@ -34,5 +36,10 @@
 
   nav a:hover {
     color: var(--blaa);
+  }
+
+  .logo img {
+    height: 100px;
+    margin-bottom: 10%;
   }
 </style>
