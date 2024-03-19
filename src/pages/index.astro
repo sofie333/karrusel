@@ -6,14 +6,14 @@ import Formular from "../components/index_components/Formular.astro";
 import Lineup from "../components/index_components/Lineup.astro";
 import Banner from "../components/index_components/Banner.astro";
 
-const data = await fetch("https://dofjurysipshifoimvyh.supabase.co", {
+const data = await fetch("https://dofjurysipshifoimvyh.supabase.co/rest/v1/karrusel", {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvZmp1cnlzaXBzaGlmb2ltdnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTEzMjYsImV4cCI6MjAyNjA2NzMyNn0.9dty-Cjmpg6zg6892rW1Zbx8oXq36KftJTYRLgtgqyw",
   },
 }).then((res) => res.json());
 
-console.log(data);
+//console.log(data);
 
 /* url ("https://dofjurysipshifoimvyh.supabase.co");*/
 
@@ -40,7 +40,9 @@ console.log(data);
 
   <!-- Indsæt lineup -->
 
-  <Lineup />
+  <div id="lineup">
+    <Lineup />
+  </div>
 
   <img id="karrusel_illu" src="/img/karrusel.svg" alt="karrusel illustration" width="100px" height="100px" />
 
@@ -49,7 +51,6 @@ console.log(data);
     <Formular header="Get the latest news and updates" info="Do you want to get the latest news from Karrusel Festival? sign up here to get notifications about it all. " knap="Subscribe" />
   </div>
 </MainLayout>
-
 <style>
   #karrusel_h1 {
     color: var(--hvid);

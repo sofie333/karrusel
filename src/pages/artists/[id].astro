@@ -1,19 +1,22 @@
 ---
-import { responseHasCookies } from "astro/dist/core/cookies";
+import MainLayout from "../../layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
-  const data = await fetch("https://dofjurysipshifoimvyh.supabase.co", {
+  const data = await fetch("https://dofjurysipshifoimvyh.supabase.co/rest/v1/karrusel", {
     method: "GET",
     headers: {
       apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRvZmp1cnlzaXBzaGlmb2ltdnloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTEzMjYsImV4cCI6MjAyNjA2NzMyNn0.9dty-Cjmpg6zg6892rW1Zbx8oXq36KftJTYRLgtgqyw",
     },
   }).then((response) => response.json());
 
-  return data.map((post) => {
+  return data.map((kunstner) => {
     return {
-      params: { id: post.id },
-      props: { post },
+      params: { id: kunstner.id },
+      props: { myData: kunstner },
     };
   });
 }
+
+const { myData } = Astro.props;
+//console.log(myData);
 ---

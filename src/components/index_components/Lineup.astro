@@ -1,5 +1,6 @@
 ---
 import Artist from "./Artist.astro";
+const {indhold} = Astro.props
 
 const data = await fetch("https://dofjurysipshifoimvyh.supabase.co/rest/v1/karrusel", {
   method: "GET",
@@ -9,9 +10,12 @@ const data = await fetch("https://dofjurysipshifoimvyh.supabase.co/rest/v1/karru
 }).then((res) => res.json());
 
 
+
 ---
 
-<article>
+
+
+ <article>
 {
   data.map((artist) => {
     return <Artist data={artist}/>;
@@ -19,11 +23,13 @@ const data = await fetch("https://dofjurysipshifoimvyh.supabase.co/rest/v1/karru
 }
 </article>
 
+
 <style>
 
 article {
   display: flex;
   gap: 20px;
+  width: 200px;
 
 }
 
