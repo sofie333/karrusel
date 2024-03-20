@@ -1,63 +1,103 @@
-
-<ul class="footer"> 
-<ul class="footer1">
-  <li>
-    <img src="../img/logo.svg" alt="billede af logo" />
-  </li>
-  <li>NUS/NUS ApS</li>
-  <li>CVR 31183200</li>
-</ul>
-<ul class="footer_2">
-  <li>LOCATION</li>
-  <li>Refshalevej 193 1432 Copenhagen Denmark</li>
-  <li>GENERAL INQUIRES info@nusnus.dk</li>
-</ul>
-<ul class="footer_3">
-  <li>Tickets <a href="tickets.astro"></a></li>
-  <li>MAP <a href="map.astro"></a></li>
-  <li>VALUES <a href="values.astro"></a></li>
-</ul>
-
-<ul class="footer_4">
-    <a href="" aria-label="Instagram"><i class="fa-brands fa-square-instagram"
-        style="color: #ffffff;"></i></a>
-
-    <a href="" aria-label="Facebook"><i class="fa-brands fa-square-facebook"
-            style="color: #ffffff;"></i></a>
-        
-</ul>
-</ul>
+<div class="footer_flex">
+  <ul class="footer1">
+    <li>
+      <img src="../img/logo.svg" alt="billede af logo" />
+    </li>
+    <li>NUS/NUS ApS</li>
+    <br />
+    <li>CVR 31183200</li>
+  </ul>
+  <ul class="footer_2">
+    <li>LOCATION</li>
+    <li>Refshalevej 193</li>
+    <li>1432 Copenhagen Denmark</li>
+    <br />
+    <li>GENERAL INQUIRES info@nusnus.dk</li>
+  </ul>
+  <ul class="footer_3">
+    <li>Tickets <a href="tickets.astro"></a></li>
+    <br />
+    <li>MAP <a href="map.astro"></a></li>
+    <br />
+    <li>VALUES <a href="values.astro"></a></li>
+  </ul>
+  <div class="footer_4">
+    <a href="https://www.instagram.com/karruselfest/"
+      ><img
+        id="ig"
+        src="../img/instagram.svg"
+        width="40"
+        height="40"
+        alt="instalogo"
+        class="insta"
+      /></a
+    >
+    <a href="https://www.facebook.com/Karruselfestival"
+      ><img
+        src="../img/facebook.svg"
+        width="40"
+        height="40"
+        alt="fblogo"
+        class="facebook"
+      /></a
+    >
+  </div>
+</div>
 
 <style>
-
-li {
+  li {
     color: white;
-    font-family: "pt"
-}
+    font-family: "pt";
+    list-style: none;
+  }
 
-footer {
+  footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+    grid-column: 1fr;
+  }
 
-
-.footer1 {
-/* list-style: disc;
+  .footer_flex {
+    display: flex;
+    width: 1200px;
+  }
+  .footer1 {
+    /* list-style: disc;
 display: flex;
 flex-direction: column;
 padding: 30px;
 align-items: start;
 grid-template-columns: 3fr 1fr 1fr; */
-grid-column: 1;
-}
+  }
 
-footer_2 {
-grid-column: 1;
-}
+  .footer_2 {
+  }
 
-footer_3 {
-grid-column: 1;
-}
+  .footer_3 {
+  }
 
+  .footer_4 {
+    padding-top: 200px;
+    display: flex;
+  }
+
+  .footer_4 img {
+    width: 40px;
+    margin-left: 20px;
+    color: white;
+  }
+
+  ul {
+    padding-left: 150px;
+    padding-top: 200px;
+  }
+
+  img {
+    width: 100px;
+    padding-bottom: 10px;
+    padding-top: -10px;
+  }
+
+  #ig {
+    margin-left: 150px;
+  }
 </style>
-
