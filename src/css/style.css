@@ -20,21 +20,21 @@ html {
 
 @font-face {
   font-family: "rubik";
-  src: url(../src/fonts/webfontkit-20240314-054346/rubikmonoone-regular-webfont.woff2);
+  src: url(/src/fonts/webfontkit-20240314-054346/rubikmonoone-regular-webfont.woff2);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "pt";
-  src: url(../src/fonts/webfontkit-20240314-054322/ptmono-regular-webfont.woff2);
+  src: url(/src/fonts/webfontkit-20240314-054322/ptmono-regular-webfont.woff2);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "worksans";
-  src: url(../src/fonts/webfontkit-20240314-054426/worksans-variablefont_wght-webfont.woff2);
+  src: url(/src/fonts/webfontkit-20240314-054426/worksans-variablefont_wght-webfont.woff2);
   font-weight: normal;
   font-style: normal;
 }
