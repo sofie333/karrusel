@@ -12,7 +12,8 @@
     <li>Refshalevej 193</li>
     <li>1432 Copenhagen Denmark</li>
     <br />
-    <li>GENERAL INQUIRES info@nusnus.dk</li>
+    <li>GENERAL INQUIRES</li>
+    <li>info@nusnus.dk</li>
   </ul>
   <ul class="footer_3">
     <li><a href="tickets">TICKETS</a></li>
@@ -22,31 +23,17 @@
     <li><a href="values">VALUES</a></li>
   </ul>
   <div class="footer_4">
-    <a href="https://www.instagram.com/karruselfest/"
-      ><img
-        id="ig"
-        src="../img/instagram.svg"
-        width="40"
-        height="40"
-        alt="instalogo"
-        class="insta"
-      /></a
-    >
-    <a href="https://www.facebook.com/Karruselfestival"
-      ><img
-        src="../img/facebook.svg"
-        width="40"
-        height="40"
-        alt="fblogo"
-        class="facebook"
-      /></a
-    >
+    <a href="https://www.instagram.com/karruselfest/"><img id="ig" src="../img/instagram.svg" width="40" height="40" alt="instalogo" class="insta" /></a>
+    <a href="https://www.facebook.com/Karruselfestival"><img src="../img/facebook.svg" width="40" height="40" alt="fblogo" class="facebook" /></a>
   </div>
 </div>
 
 <style>
+  .footer_2 {
+    line-height: 1.5rem;
+  }
   li {
-    color: white;
+    color: var(--hvid);
     font-family: "pt";
     list-style: none;
   }
@@ -71,9 +58,13 @@
     gap: 10px;
   }
 
+  a:hover {
+    color: var(--blaa);
+  }
+
   a {
     text-decoration: none;
-    color: white;
+    color: var(--hvid);
   }
 
   @media (min-width: 800px) {
@@ -97,7 +88,7 @@
     .footer_4 img {
       width: 40px;
       margin-left: 20px;
-      color: white;
+      color: var(--hvid);
     }
 
     ul {
