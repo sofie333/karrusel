@@ -12,14 +12,27 @@ import Menu from "../components/Menu.astro";
 </MainLayout>
 
 <style>
-  h1 {
-    color: var(--lilla);
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+  @media (max-width: 850px) {
+    h1 {
+      color: var(--lilla);
+      margin-top: 10%;
+      padding-bottom: 5%;
+    }
 
-  img {
-    padding-left: 400px;
-    padding-top: 10px;
+    img {
+      max-width: 390px;
+    }
+  }
+  @media (min-width: 850px) {
+    h1 {
+      color: var(--lilla);
+      margin-left: 26%;
+      margin-top: 5%;
+      margin-bottom: 2%;
+    }
+    img {
+      padding-left: 400px;
+      padding-top: 10px;
+    }
   }
 </style>
