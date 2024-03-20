@@ -1,4 +1,6 @@
-<ul class="footer">
+
+<ul class="footer"> 
+<ul class="footer1">
   <li>
     <img src="../img/logo.svg" alt="billede af logo" />
   </li>
@@ -24,6 +26,7 @@
             style="color: #ffffff;"></i></a>
         
 </ul>
+</ul>
 
 <style>
 
@@ -33,19 +36,27 @@ li {
 }
 
 footer {
-list-style: disc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.footer1 {
+/* list-style: disc;
 display: flex;
 flex-direction: column;
 padding: 30px;
 align-items: start;
+grid-template-columns: 3fr 1fr 1fr; */
+grid-column: 1;
 }
-}
-footer_2 {
 
+footer_2 {
+grid-column: 1;
 }
 
 footer_3 {
-
+grid-column: 1;
 }
 
 </style>
