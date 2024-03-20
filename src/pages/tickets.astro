@@ -40,29 +40,13 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   h1 {
-    color: white;
+    color: var(--hvid);
     font-family: rubik;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 80px;
   }
   h2 {
-    color: white;
+    color: var(--hvid);
     font-family: rubik;
-  }
-
-  .center {
-    display: flex;
-    justify-content: center;
-  }
-
-  .stor {
-    display: block;
-  }
-
-  #thursday,
-  #friday {
-    margin-bottom: 5%;
   }
 
   #price {
@@ -70,42 +54,99 @@ import MainLayout from "../layouts/MainLayout.astro";
     font-size: 1.2rem;
   }
 
-  .daytickets {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    margin-bottom: 10%;
+  @media (max-width: 850px) {
+    h1 {
+      margin-bottom: 10%;
+    }
+    .stjerner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 20%;
+      margin-bottom: 5%;
+    }
+    #to_stjerner {
+      max-width: 50px;
+    }
+
+    #stjerne_lille {
+      max-width: 50px;
+    }
+
+    #stor {
+      max-width: 415px;
+      margin-bottom: 5%;
+    }
+
+    .textbox h2 {
+      text-align: center;
+    }
+
+    .textbox p {
+      margin-left: 14%;
+      line-height: 1.5rem;
+      margin-bottom: 3%;
+    }
+
+    .daytickets {
+      margin-left: 8%;
+      margin-top: 5%;
+      margin-bottom: 10%;
+    }
+
+    #thursday,
+    #friday {
+      margin-bottom: 5%;
+    }
   }
 
-  .textbox {
-    margin-top: 5%;
-  }
+  @media (min-width: 850px) {
+    .center {
+      display: flex;
+      justify-content: center;
+    }
 
-  .textbox p {
-    line-height: 1.5rem;
-    max-width: 400px;
-  }
+    #thursday,
+    #friday {
+      margin-bottom: 5%;
+    }
 
-  .textbox h2 {
-    max-width: 500px;
-  }
+    .daytickets {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: flex-end;
+      margin-bottom: 10%;
+    }
 
-  .stjerner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 10%;
-    margin-bottom: 5%;
-  }
+    .textbox {
+      margin-top: 5%;
+    }
 
-  #stjerne_lille {
-    padding-left: 50%;
-  }
-  .col1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 5%;
-    margin-left: 15%;
-    margin-right: 15%;
+    .textbox p {
+      line-height: 1.5rem;
+      max-width: 400px;
+    }
+
+    .textbox h2 {
+      max-width: 500px;
+    }
+
+    .stjerner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 10%;
+      margin-bottom: 5%;
+    }
+
+    #stjerne_lille {
+      padding-left: 50%;
+    }
+    .col1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 5%;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
   }
 </style>
