@@ -1,7 +1,7 @@
 <div class="footer_flex">
-  <ul class="footer1">
+  <ul class="footer_1">
     <li>
-      <img src="../img/logo.svg" alt="billede af logo" />
+      <img id="logo" src="../img/logo.svg" alt="billede af logo" />
     </li>
     <li>NUS/NUS ApS</li>
     <br />
@@ -15,11 +15,11 @@
     <li>GENERAL INQUIRES info@nusnus.dk</li>
   </ul>
   <ul class="footer_3">
-    <li>Tickets <a href="tickets.astro"></a></li>
+    <li><a href="tickets">TICKETS</a></li>
     <br />
-    <li>MAP <a href="map.astro"></a></li>
+    <li><a href="map">MAP</a></li>
     <br />
-    <li>VALUES <a href="values.astro"></a></li>
+    <li><a href="values">VALUES</a></li>
   </ul>
   <div class="footer_4">
     <a href="https://www.instagram.com/karruselfest/"
@@ -51,53 +51,62 @@
     list-style: none;
   }
 
-  footer {
-    display: grid;
-    grid-column: 1fr;
+  ul {
+    margin-top: 30px;
+  }
+
+  #logo {
+    margin-bottom: 30px;
+    width: 100px;
   }
 
   .footer_flex {
-    display: flex;
-    width: 1200px;
-  }
-  .footer1 {
-    /* list-style: disc;
-display: flex;
-flex-direction: column;
-padding: 30px;
-align-items: start;
-grid-template-columns: 3fr 1fr 1fr; */
-  }
-
-  .footer_2 {
-  }
-
-  .footer_3 {
+    margin-left: 40px;
   }
 
   .footer_4 {
-    padding-top: 200px;
     display: flex;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    gap: 10px;
   }
 
-  .footer_4 img {
-    width: 40px;
-    margin-left: 20px;
+  a {
+    text-decoration: none;
     color: white;
   }
 
-  ul {
-    padding-left: 150px;
-    padding-top: 200px;
-  }
+  @media (min-width: 800px) {
+    .footer_flex {
+      display: flex;
+      width: 1200px;
+    }
 
-  img {
-    width: 100px;
-    padding-bottom: 10px;
-    padding-top: -10px;
-  }
+    .footer_1 {
+      padding-bottom: 10px;
+      margin-bottom: 100px;
+    }
 
-  #ig {
-    margin-left: 150px;
+    .footer_4 {
+      padding-top: 200px;
+      display: flex;
+      margin-top: 30px;
+      margin-left: 50px;
+    }
+
+    .footer_4 img {
+      width: 40px;
+      margin-left: 20px;
+      color: white;
+    }
+
+    ul {
+      padding-left: 150px;
+      padding-top: 200px;
+    }
+
+    img {
+      width: 100px;
+    }
   }
 </style>
