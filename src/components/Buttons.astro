@@ -15,39 +15,72 @@ const { variant, size } = Astro.props;
     transform: translateX(-50%);
     font-family: pt;
   }
-
-  .small {
-    font-size: 1rem;
-    padding: 10px 24px;
-  }
-
-  .large {
-    font-size: 1.6rem;
-    padding: 20px 24px;
-  }
-
-  .pos_1 {
-    left: 65%;
-    bottom: -25%;
-  }
-
-  .pos_2 {
-    left: 73.4%;
-    bottom: -61%;
-  }
-
-  .pos_3 {
-    left: 73.4%;
-    bottom: -83%;
-  }
-
-  .pos_4 {
-    left: 73.4%;
-    bottom: -106%;
-  }
-
   button:hover {
     background-color: var(--pink);
     color: var(--hvid);
+  }
+
+  @media (max-width: 850px) {
+    .small {
+      font-size: 0.8rem;
+      padding: 6px 20px;
+    }
+
+    .large {
+      font-size: 1rem;
+      padding: 6px 20px;
+    }
+
+    .pos_1 {
+      left: 70%;
+      bottom: 36.4%;
+    }
+
+    .pos_2 {
+      left: 51%;
+      bottom: -12%;
+    }
+
+    .pos_3 {
+      left: 51%;
+      bottom: -31%;
+    }
+
+    .pos_4 {
+      left: 51%;
+      bottom: -50%;
+    }
+  }
+
+  @media (min-width: 851px) {
+    .small {
+      font-size: 1rem;
+      padding: 10px 24px;
+    }
+
+    .large {
+      font-size: 1.6rem;
+      padding: 20px 24px;
+    }
+
+    .pos_1 {
+      left: 64%;
+      bottom: -11%;
+    }
+
+    .pos_2 {
+      left: 73.4%;
+      bottom: -46%;
+    }
+
+    .pos_3 {
+      left: 73.4%;
+      bottom: -69%;
+    }
+
+    .pos_4 {
+      left: 73.4%;
+      bottom: -91%;
+    }
   }
 </style>

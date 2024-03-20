@@ -2,6 +2,7 @@
 
 ---
 
+<!-- 
 <nav>
   <div class="logo">
     <a href="index">
@@ -43,3 +44,199 @@
     margin-bottom: 10%;
   }
 </style>
+-->
+<article>
+  <nav class="navbar">
+    <div class="logo"><a href="index"><img src="/public/img/logo.svg" width="auto" alt="logo" /></a></div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="tickets">TICKETS</a></li>
+      <li class="nav-item"><a href="map">MAP</a></li>
+      <li class="nav-item"><a href="values">VALUES</a></li>
+    </ul>
+
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</article>
+
+<style>
+  /* header */
+  .navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  .navbar .nav-menu li a {
+    text-decoration: none;
+    font-family: pt;
+    color: var(--graa);
+    font-size: 20px;
+  }
+
+  .navbar .nav-menu li a:hover {
+    color: var(--blaa);
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    padding-right: 40px;
+  }
+
+  .nav-link {
+    transition: 0.7s ease;
+  }
+
+  .nav-link:hover {
+    opacity: 90%;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  /* .burgerbillede {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 89/75;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .openbook {
+    position: absolute;
+    width: 12%;
+    aspect-ratio: 51/37;
+    top: 20px;
+    right: 15px;
+  }
+  
+  .hide {
+    display: none;
+  } */
+
+  /* #burgerbog {
+    background-image: url(/billeder/burgerbog.svg);
+    width: 10%;
+    height: 100%;
+  } */
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--graa);
+  }
+
+  /* logo style */
+  .logo img {
+    max-height: 100px;
+    max-width: 100px;
+    padding-top: 1rem;
+  }
+
+  @media (min-width: 800px) {
+    .logo img {
+      max-height: 200px;
+      max-width: 200px;
+      padding-top: 1rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hamburger {
+      display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 110px;
+      gap: 0;
+      flex-direction: column;
+      background-color: var(--sort);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      border-bottom: 2px solid var(--pink);
+      padding-bottom: 10px;
+    }
+
+    .nav-item {
+      margin: 16px 0;
+    }
+    .nav-menu.active {
+      left: 0;
+    }
+    .nav-menu .nav-item a {
+      font-family: inter;
+      text-decoration: none;
+      color: var(--pink);
+      font-size: 2rem;
+    }
+
+    .nav-menu a:hover {
+      opacity: 90%;
+    }
+    header .navbar .logo {
+      max-height: 100px;
+      max-width: 100%;
+    }
+  }
+
+  .nav-menu {
+    list-style-type: none;
+  }
+
+  header .navbar .logo {
+    max-height: auto;
+    max-width: 160px;
+  }
+  header .navbar a {
+    text-decoration: none;
+  }
+
+  .nav_menu a {
+    border: 1px solid rgba(250, 245, 195, 0);
+  }
+
+  a:hover {
+    color: var(--blaa);
+  }
+
+  .active_border {
+    border: 1px solid #faf5c3;
+  }
+</style>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navmenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navmenu.classList.toggle("active");
+    // hamburger.ad;
+  });
+</script>
