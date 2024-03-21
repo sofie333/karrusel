@@ -3,7 +3,7 @@ const { data } = Astro.props;
 //console.log(data);
 ---
 
-<a href={"artists/$(data.id)"}>
+<a href={`artists/${data.id}`}>
   <article>
     <img src="/img/2stjerner.svg" alt="stjerne" width="30px" />
     <p>{data.name}</p>

@@ -1,6 +1,9 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 
+import Menu from "../../components/Menu.astro";
+import Footer from "../../components/Footer.astro";
+
 export async function getStaticPaths() {
   const data = await fetch("https://dofjurysipshifoimvyh.supabase.co/rest/v1/karrusel", {
     method: "GET",
@@ -18,5 +21,64 @@ export async function getStaticPaths() {
 }
 
 const { myData } = Astro.props;
-//console.log(myData);
 ---
+
+<Menu />
+<article><h1>{myData.artist}</h1><p></p></article>
+
+<MainLayout>
+  <div class="grid_artist">
+    <div class="artist_col">
+      <h1>{myData.name}</h1>
+      <h2>{myData.date}</h2>
+      <h2>{myData.time} {myData.stage}</h2>
+      <p>{myData.description}</p>
+    </div>
+
+    <div class="artist_col2">
+      <img src={"/img/" + myData.image} alt="billede af artist" />
+    </div>
+  </div>
+
+  <Footer />
+</MainLayout>
+
+<style>
+  .grid_artist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 70px;
+    margin-left: 70px;
+    gap: 20px;
+  }
+
+  .artist_col {
+    display: grid;
+    grid-column: 1 / span 1;
+    margin-top: 2rem;
+  }
+
+  h1 {
+    color: var(--blaa);
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    color: white;
+    font-family: "pt";
+    font-size: 30px;
+    margin-bottom: 50px;
+    line-height: 1;
+  }
+
+  p {
+    color: white;
+    font-family: "worksans";
+    max-width: 600px;
+    line-height: 1.5rem;
+  }
+
+  .artist_col2 img {
+    max-width: 500px;
+  }
+</style>
