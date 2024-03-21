@@ -81,4 +81,11 @@ const { myData } = Astro.props;
   .artist_col2 img {
     max-width: 500px;
   }
+
+  @media (max-width: 800px) {
+    .grid_artist {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 </style>
