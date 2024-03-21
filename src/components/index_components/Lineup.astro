@@ -26,15 +26,29 @@ const data = await fetch("https://dofjurysipshifoimvyh.supabase.co/rest/v1/karru
 
 <style>
 
-article {
+
+
+  article {
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin-left: 70px;
+margin-top: 50px;
+  }
+
+  @media (min-width:800px) {
+
+    article {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-left: 430px;
-  margin-top: 50px;
+  margin-top: 50px; 
   gap: 20px;
-  width: 200px;
+  max-width: 200px;
+
 
 }
+
+  }
 
 
 </style>
